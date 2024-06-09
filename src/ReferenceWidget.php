@@ -18,10 +18,10 @@ class ReferenceWidget extends BaseWidget implements TwigAwareInterface, CacheAwa
     use CacheTrait;
     use StopwatchTrait;
 
-    protected $name = 'AcmeCorp ReferenceWidget';
-    protected $target = AdditionalTarget::WIDGET_BACK_DASHBOARD_ASIDE_TOP;
-    protected $priority = 200;
-    protected $template = '@reference-extension/widget.html.twig';
-    protected $zone = RequestZone::BACKEND;
-    protected $cacheDuration = -1800;
+    protected ?string $name = 'AcmeCorp ReferenceWidget';
+    protected string $target = AdditionalTarget::WIDGET_BACK_DASHBOARD_ASIDE_TOP;
+    protected ?int $priority = 200;
+    protected ?string $template = '@reference-extension/widget.html.twig';
+    protected ?string $zone = RequestZone::BACKEND;
+    protected int $cacheDuration = -1800;
 }

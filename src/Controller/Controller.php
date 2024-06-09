@@ -15,8 +15,9 @@ class Controller extends ExtensionController
     /**
      * @Route("/extensions/reference/{name}", name="extension_reference")
      */
-    public function index($name = 'foo', Sanitiser $sanitiser, Environment $twig): Response
+    public function index(string $name, Sanitiser $sanitiser, Environment $twig): Response
     {
+        $name ??= 'World';
         $context = [
             'title' => 'AcmeCorp Reference Extension',
             'name' => $name,
