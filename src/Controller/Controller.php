@@ -12,9 +12,7 @@ use Twig\Environment;
 
 class Controller extends ExtensionController
 {
-    /**
-     * @Route("/extensions/reference/{name}", name="extension_reference")
-     */
+    #[Route('/extensions/reference/{name}', name: 'extension_reference')]
     public function index(string $name, Sanitiser $sanitiser, Environment $twig): Response
     {
         $name ??= 'World';
